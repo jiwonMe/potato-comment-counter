@@ -1,5 +1,6 @@
 import { getCommentCount } from "@/api/getCommentCount";
 import CommentDisplay from "@/components/CommentDisplay";
+import ShareURL from "@/components/ShareURL";
 import { Metadata } from 'next';
 import Link from "next/link";
 
@@ -14,13 +15,14 @@ export default function Home() {
 아버지랑 딸인줄 <br />
 - 지나가는행인1
       </div>
-      <div className="flex flex-col items-left justify-start gap-4">
+      <div className="flex flex-col items-left justify-start gap-4 w-1/3">
         <CommentDisplay />
         <Link href='https://m.hankookilbo.com/News/Read/A2021031811480000657#comment-parent-container'>
-        <button className='bg-blue-500 text-white p-2 rounded-md'>
+        <button className='bg-blue-500 text-white p-2 rounded-md w-full'>
           좋아요 누르러 가기
         </button>
       </Link>
+      <ShareURL />
       </div>
     </main>
   );
