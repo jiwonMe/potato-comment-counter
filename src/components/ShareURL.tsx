@@ -1,8 +1,7 @@
 'use client';
 
 import { v4 as uuid } from 'uuid'
-import React, { useState } from 'react';
-import { getCommentCount } from '@/api/getCommentCount';
+import React from 'react';
 
 const ShareURL: React.FC = () => {
 
@@ -11,8 +10,8 @@ const ShareURL: React.FC = () => {
       try {
         await navigator.share({
           title: '장감자 댓글 좋아요 수',
-          text: '장감자 댓글 좋아요 수를 확인해보세요! 지금 좋아요 수: ' + getCommentCount(),
-          url: `${window.location.origin}/?${uuid()}`
+          text: '장감자 댓글 좋아요 수를 확인해보세요: ',
+          url: `${window.location.origin}/?${uuid().slice(0, 8)}`
         });
       } catch (error) {
         // setShareResult('공유 중 오류가 발생했습니다.');
@@ -21,7 +20,7 @@ const ShareURL: React.FC = () => {
     }
   };
 
-  if (!navigator.share) {
+  if (typeof window === 'undefined' || !navigator || !navigator.share) {
     return null;
   }
 
