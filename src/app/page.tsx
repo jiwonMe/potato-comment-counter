@@ -8,8 +8,9 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-24">
       <h1 className="text-2xl font-bold mb-4">장감자 댓글 좋아요 수</h1>
       <div className="text-left text-zinc-200 pl-4 border-l-2 border-zinc-200 mb-4">
-      남자 90년대생 실자냐? ㅋㅋㅋㅋㅋㅋㅋㅋ <br/>
-아버지랑 딸인줄
+      남자 90년대생 실화냐? ㅋㅋㅋㅋㅋㅋㅋㅋ <br/>
+아버지랑 딸인줄 <br />
+- 지나가는행인1
       </div>
       <div className="flex flex-col items-left justify-start gap-4">
         <CommentDisplay />
