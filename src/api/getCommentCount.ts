@@ -9,5 +9,5 @@ export const getCommentCount = async () => {
   };
 
   const comment = await findByOpinionId('0e9dbb7b-ca7b-4851-8d92-9a570127514d');
-  return comment;
+  return comment.likeCnt;
 };
