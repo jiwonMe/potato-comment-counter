@@ -15,7 +15,7 @@ export default function Home() {
 아버지랑 딸인줄 <br />
 - 지나가는행인1
       </div>
-      <div className="flex flex-col items-left justify-start gap-4 w-1/3">
+      <div className="flex flex-col items-left justify-start gap-4 w-1/3 min-w-[300px] max-w-[500px]">
         <CommentDisplay />
         <Link href='https://m.hankookilbo.com/News/Read/A2021031811480000657#comment-parent-container'>
         <button className='bg-blue-500 text-white p-2 rounded-md w-full'>
