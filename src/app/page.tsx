@@ -3,6 +3,8 @@ import CommentDisplay from "@/components/CommentDisplay";
 import { Metadata } from 'next';
 import Link from "next/link";
 
+export const revalidate = 0;
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
