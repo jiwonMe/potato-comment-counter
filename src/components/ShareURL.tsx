@@ -11,7 +11,7 @@ const ShareURL: React.FC = () => {
         await navigator.share({
           title: '장감자 댓글 좋아요 수',
           text: '장감자 댓글 좋아요 수를 확인해보세요: ',
-          url: `${window.location.origin}/?${uuid().slice(0, 8)}`
+          url: `https://영포티감자.kr/?${uuid().slice(0, 8)}`
         });
       } catch (error) {
         // setShareResult('공유 중 오류가 발생했습니다.');
@@ -20,7 +20,7 @@ const ShareURL: React.FC = () => {
     }
   };
 
-  if (typeof window === 'undefined' || !navigator || !navigator.share) {
+  if (!navigator.share) {
     return null;
   }
 
