@@ -19,7 +19,7 @@ export async function GET(request: Request) {
           justifyContent: 'center',
         }}
       >
-        🥔 좋아요: {count}
+        좋아요: {count}
       </div>
     ),
     {
