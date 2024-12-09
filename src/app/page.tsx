@@ -1,6 +1,7 @@
 import { getCommentCount } from "@/api/getCommentCount";
 import CommentDisplay from "@/components/CommentDisplay";
 import ShareURL from "@/components/ShareURL";
+import TwitterEmbed from "@/components/TwitterEmbed";
 import { Metadata } from 'next';
 import Link from "next/link";
 
@@ -9,7 +10,7 @@ export const revalidate = 0;
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-24 bg-black text-white">
-      <h1 className="text-2xl font-bold mb-4">장감자 댓글 좋아요 수</h1>
+      {/* <h1 className="text-2xl font-bold mb-4">장감자 댓글 좋아요 수</h1>
       <div className="text-left text-zinc-200 pl-4 border-l-2 border-zinc-200 mb-4">
       남자 90년대생 실화냐? ㅋㅋㅋㅋㅋㅋㅋㅋ <br/>
 아버지랑 딸인줄 <br />
@@ -21,9 +22,10 @@ export default function Home() {
         <button className='bg-blue-500 text-white p-2 rounded-md w-full'>
           좋아요 누르러 가기
         </button>
-      </Link>
+      </Link> */}
+      <TwitterEmbed />
       <ShareURL />
-      </div>
+      {/* </div> */}
     </main>
   );
 }

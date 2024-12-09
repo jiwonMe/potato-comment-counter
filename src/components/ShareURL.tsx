@@ -9,8 +9,8 @@ const ShareURL: React.FC = () => {
     if (navigator.share) {
       try {
         await navigator.share({
-          title: '장감자 댓글 좋아요 수',
-          text: '장감자 댓글 좋아요 수를 확인해보세요: ',
+          title: '영포티감자',
+          text: '영포티감자: ',
           url: `https://영포티감자.kr/?${uuid().slice(0, 8)}`
         });
       } catch (error) {
